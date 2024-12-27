@@ -57,6 +57,7 @@
 .article-title {
     font-size: 1.5rem;
     font-family: lora;
+    font-weight: bold;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
