@@ -1,0 +1,30 @@
+.container__section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.title__section-header {
+    font-size: 2rem;
+    color: black;
+}
+
+.button__section-header {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: end;
+    color: red;
+
+    border: none;
+    background: none;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.button__section-header * {
+    margin-left: 5px;
+}

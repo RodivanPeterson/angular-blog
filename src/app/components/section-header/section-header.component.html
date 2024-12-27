@@ -1,1 +1,7 @@
-<p>section-header works!</p>
+<div class="container__section-header">
+    <h2 class="title__section-header">{{ sectionName }}</h2>
+    <button class="button__section-header">
+        <span *ngIf="!hideButtonLabel" class="d-sm-none d-md-inline">See all</span>
+        <span><i class="bi bi-arrow-right"></i></span>
+    </button>
+</div>

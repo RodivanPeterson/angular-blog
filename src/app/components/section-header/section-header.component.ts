@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-section-header',
@@ -11,5 +11,8 @@ export class SectionHeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input() sectionName: string = '';
+  @Input() hideButtonLabel: boolean = false;
 
 }
