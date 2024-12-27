@@ -1,0 +1,27 @@
+i {
+    font-size: 1.2em;
+    padding: 0 15px;
+    color: black;
+}
+
+.custom-icon {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url('../../../../assets/icons/bell-indicator.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 3px;
+}
+
+.dropdown-menu a:focus {
+    background-color: #E40A15;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.new-notification {
+    font-weight: bold;
+}

@@ -1,0 +1,43 @@
+<div class="card-container"
+    [ngClass]="{
+        'top-image-width': imagePosition === 'top',
+        'row': imagePosition === 'left',
+        'background-image-container': imagePosition === 'background'
+    }"
+    [ngStyle]="{
+        'height.px': imagePosition === 'background' ? articleImgHeight : '',
+        'background-image': imagePosition === 'background' ? 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url(' + imageArticle + ')' : 'none'
+    }"
+>
+    <div *ngIf="imagePosition !== 'background'"
+        [ngClass]="{
+            'col-md-6': imagePosition === 'left',
+            'image-container': imagePosition === 'left' || imagePosition === 'top',
+            'bottom-image-padding__top-image-card': imagePosition === 'top'
+        }"
+        [ngStyle]="{
+            'height.px': articleImgHeight
+        }"
+    >
+        <img src="{{ imageArticle }}" alt="">
+    </div>
+    
+    <div class="card-content" [ngClass]="{'col-md-6': imagePosition == 'left'}">
+        <span class="author-timestamp_info d-flex flex-wrap">
+            <img src="{{ authorProfilePicture }}" alt="" srcset="">
+            <span>{{ authorName }}</span>
+            <span>•</span>
+            <span>{{ publisedAt }}</span>
+        </span>
+        
+        <h3 class="article-title">{{ articleTitle }}</h3>
+        
+        <p *ngIf="showDescription" class="article-resume">{{ articleResume }}</p>
+        
+        <div class="category-reading-time_info d-flex flex-wrap">
+            <span class="category" [ngStyle]="{'color': imagePosition === 'background' ? 'white' : 'red'}">{{ category }}</span>
+            <span>•</span>
+            <span>{{ readingTime }}</span>
+        </div>
+    </div>
+</div>

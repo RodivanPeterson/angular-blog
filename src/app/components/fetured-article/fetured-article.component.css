@@ -1,0 +1,12 @@
+.article-title {
+    font-size: 2.5rem;
+}
+
+.article-resume {
+    font-size: 1.2rem;
+}
+
+.author-timestamp_info *, .category-reading-time_info * {
+    font-size: 1rem;
+    margin-right: 10px;
+}

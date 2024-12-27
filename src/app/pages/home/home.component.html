@@ -1,0 +1,20 @@
+<div class="container">
+    <app-header></app-header>
+    <app-hero-banner
+        [bannerTitle]="'Welcome to buletin'"
+        [bannerContent]="heroBannerContent"
+    ></app-hero-banner>
+    <!-- <app-fetured-article></app-fetured-article> -->
+    <app-article-card
+        [authorName]="'Netflix'"
+        [authorProfilePicture]="'https://yt3.googleusercontent.com/r4m9_f2nH87wTf1yoBFvwRe5pjE_lJIaKCZUkdgOq8MokC5dnpM6WbcJ4i5RQlBuBcsoRJB0cA=s900-c-k-c0x00ffffff-no-rj'"
+        [publisedAt]="'12 minutes ago'"
+        [imageArticle]="'../../../assets/images/john-wick-4.jpg'"
+        articleTitle="Where To Watch 'John Wick: Chapter 4'"
+        articleResume="There's been no official announcement regarding John Wick: Chapter 4's streaming release. However, given it's a Lionsgate film, John Wick: Chapter 4 will eventually be released on Starz."
+        [category]="'Movie'"
+        [readingTime]="'4 min read'"
+        [showDescription]=true
+        [imagePosition]="'top'"
+    ></app-article-card>
+</div>
