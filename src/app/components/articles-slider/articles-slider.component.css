@@ -1,0 +1,17 @@
+.articles-content__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.articles-content__container::-webkit-scrollbar {
+    display: none;
+}

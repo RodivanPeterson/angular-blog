@@ -1,0 +1,17 @@
+<div class="articles-content__container">
+    <div *ngFor="let post of visiblePosts">
+        <app-article-card
+            [authorName]="post.authorName"
+            [authorProfilePicture]="post.authorProfilePicture"
+            [publisedAt]="post.publisedAt"
+            [imageArticle]="post.imageArticle"
+            [articleTitle]="post.articleTitle"
+            [articleResume]="post.articleResume"
+            [category]="post.category"
+            [readingTime]="post.readingTime"
+            [showDescription]=showDescription
+            [imagePosition]="'top'"
+            [isSmallCard]=isSmallCard
+        ></app-article-card>
+    </div>
+</div>
