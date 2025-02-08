@@ -1,12 +1,19 @@
-.article-title {
-    font-size: 2.5rem;
-}
 
-.article-resume {
-    font-size: 1.2rem;
-}
-
-.author-timestamp_info *, .category-reading-time_info * {
-    font-size: 1rem;
-    margin-right: 10px;
+@media screen and (width >= 980px) {
+    .fetured-article .image-container {
+        height: 350px !important;
+    }
+    
+    .fetured-article .card-content .article-title {
+        font-size: 2.5rem;
+    }
+    
+    .fetured-article .card-content .article-resume {
+        font-size: 1.2rem;
+    }
+    
+    .fetured-article .card-content .author-timestamp_info span, .fetured-article .card-content .category-reading-time_info span {
+        font-size: 1rem;
+        margin-right: 10px;
+    }
 }
