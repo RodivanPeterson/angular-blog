@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-article-card',
@@ -7,7 +7,23 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ArticleCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() articleTitle: string = '';
+  @Input() articleResume: string = '';
+  @Input() authorName: string = '';
+  @Input() authorProfilePicture: string = '';
+  @Input() publisedAt: string = '';
+  @Input() imageArticle: string = '';
+  @Input() category: string = '';
+  @Input() readingTime: string = '';
+  @Input() showDescription: boolean = true;
+  @Input() isSmallCard: boolean = false;
+  @Input() imagePosition: string = 'top';
+  @Input() articleURL: string = '#';
+  
+  articleImgHeight: number = 250;
+  parentElementWidth: number = this.elementRef.nativeElement.parentElement.offsetWidth;
+
+  constructor(private elementRef: ElementRef) { }
   
   ngOnInit(): void {
     if(this.isSmallCard) {
@@ -22,19 +38,14 @@ export class ArticleCardComponent implements OnInit {
     if (this.imagePosition === 'left' || this.imagePosition === 'background') {
       this.isSmallCard = false;
     }
+
+    if (this.imagePosition === 'background') {
+      if (this.parentElementWidth >= 700) {
+        this.articleImgHeight = 500;
+      } else {
+        this.articleImgHeight = this.parentElementWidth;
+      }
+    }
   }
 
-  @Input() articleTitle: string = '';
-  @Input() articleResume: string = '';
-  @Input() authorName: string = '';
-  @Input() authorProfilePicture: string = '';
-  @Input() publisedAt: string = '';
-  @Input() imageArticle: string = '';
-  @Input() category: string = '';
-  @Input() readingTime: string = '';
-  @Input() showDescription: boolean = true;
-  @Input() isSmallCard: boolean = false;
-  @Input() imagePosition: string = 'top';
-  
-  articleImgHeight: number = 250;
 }

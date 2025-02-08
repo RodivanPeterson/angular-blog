@@ -1,5 +1,5 @@
-.card-container {
-    padding: 20px 0;
+a {
+    text-decoration: none;
 }
 
 .image-container {
@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .image-container img {
@@ -18,7 +19,8 @@
 }
 
 .top-image-width {
-    width: 250px;
+    width: fit-content;
+    max-width: 250px;
 }
 
 .bottom-image-padding__top-image-card {
@@ -41,6 +43,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+}
+
+@media screen and (width < 768px) {
+    .card-content {
+        margin-top: 15px;
+    }
 }
 
 .author-timestamp_info *, .category-reading-time_info * {
