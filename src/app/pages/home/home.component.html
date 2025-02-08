@@ -1,20 +1,130 @@
-<div class="container">
-    <app-header></app-header>
-    <app-hero-banner
-        [bannerTitle]="'Welcome to buletin'"
-        [bannerContent]="heroBannerContent"
-    ></app-hero-banner>
-    <!-- <app-fetured-article></app-fetured-article> -->
+<app-hero-banner
+  [bannerTitle]="'Welcome to buletin'"
+  [bannerContent]="heroBannerContent"
+></app-hero-banner>
+
+<div class="mt-3">
+  <app-fetured-article
+      [authorName]="highlightArticle[0].authorName"
+      [authorProfilePicture]="highlightArticle[0].authorProfilePicture"
+      [publisedAt]="highlightArticle[0].publisedAt"
+      [imageArticle]="highlightArticle[0].imageArticle"
+      [articleTitle]="highlightArticle[0].articleTitle"
+      [articleResume]="highlightArticle[0].articleResume"
+      [category]="highlightArticle[0].category"
+      [readingTime]="highlightArticle[0].readingTime"
+  ></app-fetured-article>
+</div>
+
+<div class="row mb-3">
+  <div class="col">
+    <app-section-header [sectionName]="'Lastest'"></app-section-header>
+    <app-articles-slider [articlesContent]="lastestNews"></app-articles-slider>
+  </div>
+</div>
+
+<app-section-header [sectionName]="'Must Read'"></app-section-header>
+<div class="row mb-3">
+    
+  <div *ngIf="isExtraLargeDevice" class="col-xl-3 mb-1">
     <app-article-card
-        [authorName]="'Netflix'"
-        [authorProfilePicture]="'https://yt3.googleusercontent.com/r4m9_f2nH87wTf1yoBFvwRe5pjE_lJIaKCZUkdgOq8MokC5dnpM6WbcJ4i5RQlBuBcsoRJB0cA=s900-c-k-c0x00ffffff-no-rj'"
-        [publisedAt]="'12 minutes ago'"
-        [imageArticle]="'../../../assets/images/john-wick-4.jpg'"
-        articleTitle="Where To Watch 'John Wick: Chapter 4'"
-        articleResume="There's been no official announcement regarding John Wick: Chapter 4's streaming release. However, given it's a Lionsgate film, John Wick: Chapter 4 will eventually be released on Starz."
-        [category]="'Movie'"
-        [readingTime]="'4 min read'"
+        [authorName]="mustRead[0].authorName"
+        [authorProfilePicture]="mustRead[0].authorProfilePicture"
+        [publisedAt]="mustRead[0].publisedAt"
+        [imageArticle]="mustRead[0].imageArticle"
+        [articleTitle]="mustRead[0].articleTitle"
+        [articleResume]="mustRead[0].articleResume"
+        [category]="mustRead[0].category"
+        [readingTime]="mustRead[0].readingTime"
         [showDescription]=true
         [imagePosition]="'top'"
     ></app-article-card>
+  </div>
+  <div class="col col-xl-6">
+    <app-article-card id="must-read-highlight-article"
+        [authorName]="highlightArticle[1].authorName"
+        [authorProfilePicture]="highlightArticle[1].authorProfilePicture"
+        [publisedAt]="highlightArticle[1].publisedAt"
+        [imageArticle]="highlightArticle[1].imageArticle"
+        [articleTitle]="highlightArticle[1].articleTitle"
+        [articleResume]="highlightArticle[1].articleResume"
+        [category]="highlightArticle[1].category"
+        [readingTime]="highlightArticle[1].readingTime"
+        [showDescription]=true
+        [imagePosition]="'background'"
+    ></app-article-card>
+  </div>
+  <div *ngIf="isExtraLargeDevice" class="col-xl-3 d-flex flex-column align-items-lg-end">
+    <app-article-card
+        [authorName]="mustRead[1].authorName"
+        [authorProfilePicture]="mustRead[1].authorProfilePicture"
+        [publisedAt]="mustRead[1].publisedAt"
+        [imageArticle]="mustRead[1].imageArticle"
+        [articleTitle]="mustRead[1].articleTitle"
+        [articleResume]="mustRead[1].articleResume"
+        [category]="mustRead[1].category"
+        [readingTime]="mustRead[1].readingTime"
+        [showDescription]=true
+        [imagePosition]="'top'"
+        [isSmallCard]=true
+    ></app-article-card>
+    <app-article-card
+        [authorName]="mustRead[2].authorName"
+        [authorProfilePicture]="mustRead[2].authorProfilePicture"
+        [publisedAt]="mustRead[2].publisedAt"
+        [imageArticle]="mustRead[2].imageArticle"
+        [articleTitle]="mustRead[2].articleTitle"
+        [articleResume]="mustRead[2].articleResume"
+        [category]="mustRead[2].category"
+        [readingTime]="mustRead[2].readingTime"
+        [showDescription]=true
+        [imagePosition]="'top'"
+        [isSmallCard]=true
+    ></app-article-card>
+  </div>
+
+  <div *ngIf="!isExtraLargeDevice">
+    <app-articles-slider [articlesContent]="mustRead"></app-articles-slider>
+  </div>
+</div>
+
+<section>
+  <app-section-header sectionName="Editor's Pick" ></app-section-header>
+
+  <app-article-card
+    [authorName]="highlightArticle[2].authorName"
+    [authorProfilePicture]="highlightArticle[2].authorProfilePicture"
+    [publisedAt]="highlightArticle[2].publisedAt"
+    [imageArticle]="highlightArticle[2].imageArticle"
+    [articleTitle]="highlightArticle[2].articleTitle"
+    [articleResume]="highlightArticle[2].articleResume"
+    [category]="highlightArticle[2].category"
+    [readingTime]="highlightArticle[2].readingTime"
+    [showDescription]=true
+    [imagePosition]="'background'"
+  ></app-article-card>
+
+  <app-articles-slider [articlesContent]="editorsPick"></app-articles-slider>
+</section>
+
+<div *ngIf="!isExtraLargeDevice" class="row mb-5">
+  <div class="col-lg-6">
+    <app-section-header [sectionName]="'Business'" ></app-section-header>
+    <app-articles-slider [articlesContent]="business"></app-articles-slider>
+  </div>
+
+  <div class="col-lg-6">
+    <app-section-header [sectionName]="'Sport News'" ></app-section-header>
+    <app-articles-slider [articlesContent]="sportNews"></app-articles-slider>
+  </div>
+</div>
+
+<div *ngIf="isExtraLargeDevice" class="row mb-5">
+  <div class="col-lg-6 pe-4">
+    <app-section-header [sectionName]="'Business'" ></app-section-header>
+  </div>
+  <div class="col-lg-6 ps-4">
+    <app-section-header [sectionName]="'Sport News'" ></app-section-header>
+  </div>
+  <app-articles-slider [articlesContent]="businessNSportNewsMediumDevices"></app-articles-slider>
 </div>

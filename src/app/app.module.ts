@@ -19,6 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SocialMediaLinkComponent } from './components/footer/social-media-link/social-media-link.component';
 import { FooterLinksComponent } from './components/footer/footer-links/footer-links.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ArticlesSliderComponent } from './components/articles-slider/articles-slider.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HomeComponent } from './pages/home/home.component';
     SocialMediaLinkComponent,
     FooterLinksComponent,
     HomeComponent,
+    ArticlesSliderComponent,
   ],
   imports: [
     BrowserModule,
