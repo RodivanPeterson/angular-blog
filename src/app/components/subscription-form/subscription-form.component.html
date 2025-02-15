@@ -1,1 +1,15 @@
-<p>subscription-form works!</p>
+<div class="bannerContainer row">
+    <div class="col-lg-5">
+        <p class="title">get first update</p>
+        <p class="callAction">Get the news in front line by<br><span class="highlight">subscribe</span> ✍️ our latest updates</p>
+    </div>
+    <div class="col-lg-4">
+        <form #form="ngForm">
+            <div class="input-group mb-2">
+                <label hidden>Email</label>
+                <input type="email" class="form-control" placeholder="Your email" required>
+                <button class="btn" type="submit">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -13,7 +13,6 @@ import { FeturedArticleComponent } from './components/fetured-article/fetured-ar
 import { ArticleCardComponent } from './components/article-card/article-card.component';
 import { HorizontalStoryScrollListComponent } from './components/horizontal-story-scroll-list/horizontal-story-scroll-list.component';
 import { UserStoryComponent } from './components/horizontal-story-scroll-list/user-story/user-story.component';
-import { CreatorProfileComponent } from './components/creator-profile/creator-profile.component';
 import { SubscriptionFormComponent } from './components/subscription-form/subscription-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialMediaLinkComponent } from './components/footer/social-media-link/social-media-link.component';
@@ -34,7 +33,6 @@ import { ArticlesSliderComponent } from './components/articles-slider/articles-s
     ArticleCardComponent,
     HorizontalStoryScrollListComponent,
     UserStoryComponent,
-    CreatorProfileComponent,
     SubscriptionFormComponent,
     FooterComponent,
     SocialMediaLinkComponent,
