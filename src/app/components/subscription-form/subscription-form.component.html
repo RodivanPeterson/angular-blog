@@ -1,14 +1,39 @@
 <div class="bannerContainer row">
     <div class="col-lg-5">
         <p class="title">get first update</p>
-        <p class="callAction">Get the news in front line by<br><span class="highlight">subscribe</span> ✍️ our latest updates</p>
+        <p class="callAction">
+            Get the news in front line by<br><span class="highlight">subscribe</span> ✍️ our latest updates
+        </p>
     </div>
     <div class="col-lg-4">
-        <form #form="ngForm">
-            <div class="input-group mb-2">
-                <label hidden>Email</label>
-                <input type="email" class="form-control" placeholder="Your email" required>
-                <button class="btn" type="submit">Subscribe</button>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+                <label for="email" hidden>Email</label>
+                <input
+                    id="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="Your email"
+                    formControlName="email">
+                <button 
+                    class="btn"
+                    type="submit"
+                    [disabled]="showSuccess"
+                    [ngClass]="{'successButton': showSuccess}">
+                    {{ buttonText }}
+                </button>
+
+            </div>
+            <div class="error" *ngIf="showErrors">
+                <span *ngIf="form.controls['email'].hasError('required')">
+                    Your email is required!
+                </span>
+                <span *ngIf="form.controls['email'].hasError('email') || form.controls['email'].hasError('pattern')">
+                    Please enter a valid email address!
+                </span>
+            </div>
+            <div class="success" *ngIf="showSuccess">
+                <span>Subscription received.</span>
             </div>
         </form>
     </div>

@@ -34,3 +34,22 @@ button:hover {
     background-color: rgb(255, 55, 55);
     color: white;
 }
+
+.successButton, button:disabled,  button:disabled:hover{
+    background-color: rgb(90, 161, 90);
+    border-color: rgb(67, 119, 67);
+    color: rgb(179, 255, 179);
+    
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+.error {
+    color: red;
+    padding: 10px;
+}
+
+.success {
+    color: green;
+    padding: 10px;
+}
