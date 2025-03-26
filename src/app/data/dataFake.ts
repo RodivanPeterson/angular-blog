@@ -30,7 +30,7 @@ export const dataFake: Posts[] = [
         authorName: 'BBC',
         authorProfilePicture: 'https://ichef.bbci.co.uk/images/ic/1920x1080/p09xtmrp.jpg',
         publisedAt: '7 hours ago',
-        imageArticle: 'https://i0.wp.com/mysilveronline.com/wp-content/uploads/2023/04/Capture-3.png?resize=660%2C470&ssl=1',
+        imageArticle: 'https://www.primenewsghana.com/images/2023/april/18/_129394681_gettyimages-1251925156.jpg',
         articleTitle: `Liverpool hammer Leeds for first win in five games`,
         articleResume: `Mohamed Salah and Diogo Jota both scored twice as Liverpool claimed a first league win in five games by inflicting a second successive home hammering on Leeds United, who remain mired deep in the relegation battle.`,
         category: 'Sport',

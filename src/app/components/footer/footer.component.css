@@ -1,0 +1,19 @@
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.links li {
+    list-style: none;
+}
+
+.links a {
+    padding: 10px;
+    text-decoration: none;
+    color: red;
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 400;
+}
