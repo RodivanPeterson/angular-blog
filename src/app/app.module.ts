@@ -16,8 +16,6 @@ import { HorizontalStoryScrollListComponent } from './components/horizontal-stor
 import { UserStoryComponent } from './components/horizontal-story-scroll-list/user-story/user-story.component';
 import { SubscriptionFormComponent } from './components/subscription-form/subscription-form.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SocialMediaLinkComponent } from './components/footer/social-media-link/social-media-link.component';
-import { FooterLinksComponent } from './components/footer/footer-links/footer-links.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ArticlesSliderComponent } from './components/articles-slider/articles-slider.component';
 
@@ -36,8 +34,6 @@ import { ArticlesSliderComponent } from './components/articles-slider/articles-s
     UserStoryComponent,
     SubscriptionFormComponent,
     FooterComponent,
-    SocialMediaLinkComponent,
-    FooterLinksComponent,
     HomeComponent,
     ArticlesSliderComponent,
   ],
